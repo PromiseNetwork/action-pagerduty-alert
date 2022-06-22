@@ -1,5 +1,5 @@
 name: 'PagerDuty Alert'
-description: 'GitHub Action to send a critical PagerDuty alert, e.g. on action failure.'
+description: 'GitHub Action to send a PagerDuty alert, e.g. on action failure.'
 inputs:
   pagerduty-integration-key:
     description: 'The integration key for your PagerDuty service'
@@ -7,6 +7,10 @@ inputs:
   pagerduty-dedup-key:
     description: 'The key used to correlate PagerDuty triggers, acknowledges, and resolves for the same alert.'
     required: false
+  pagerduty-alert-severity:
+    description: 'The severity level used when creating a PagerDuty event'
+    required: false
+    default: critical
 runs:
   using: 'node12'
   main: 'index.js'
