@@ -20,6 +20,10 @@ Sends a critical PagerDuty alert, e.g. on action failure.
 **Optional:** a `dedup_key` for your alert. This will enable PagerDuty to coalesce multiple alerts into one.
 More documentation is available [here](https://developer.pagerduty.com/docs/events-api-v2/trigger-events/).
 
+`pagerduty-alert-severity`
+
+**Optional:** the `severity` for your alert. Defaults to `critical`.
+
 ## Example usage
 
 In your `steps`:
