@@ -11,6 +11,9 @@ inputs:
     description: 'The severity level used when creating a PagerDuty event'
     required: false
     default: critical
+  pagerduty-alert-summary:
+    description: 'The summary used when creating a PagerDuty event'
+    required: false
 runs:
   using: 'node12'
   main: 'index.js'

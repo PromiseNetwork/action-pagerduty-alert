@@ -23,10 +23,11 @@ async function sendAlert(alert) {
 try {
   const integrationKey = core.getInput('pagerduty-integration-key');
   const severity = core.getInput('pagerduty-alert-severity'); // defaults to 'critical'
+  const summary = core.getInput('pagerduty-alert-summary') || `${context.repo.repo}: Error in "${context.workflow}" run by @${context.actor}`;
 
   let alert = {
     payload: {
-      summary: `${context.repo.repo}: Error in "${context.workflow}" run by @${context.actor}`,
+      summary,
       timestamp: new Date().toISOString(),
       source: 'GitHub Actions',
       severity,

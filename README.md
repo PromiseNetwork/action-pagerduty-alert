@@ -1,5 +1,5 @@
 # PagerDuty Alert GitHub Action
-Sends a critical PagerDuty alert, e.g. on action failure.
+Sends a PagerDuty alert, e.g. on action failure.
 
 ## Prerequisites
 
@@ -23,6 +23,10 @@ More documentation is available [here](https://developer.pagerduty.com/docs/even
 `pagerduty-alert-severity`
 
 **Optional:** the `severity` for your alert. Defaults to `critical`.
+
+`pagerduty-alert-summary`
+
+**Optional:** Overrides the default summary title for the alert with a custom template.
 
 ## Example usage
 
